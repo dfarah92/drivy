@@ -172,10 +172,10 @@ function getRental( id )
 {
 	for ( var i = 0 ; i < rentals.length ; i++)
 	{
-			if ( id == rentals[i].id)
-			{
-				return rentals[i];
-			}
+		if ( id == rentals[i].id)
+		{
+			return rentals[i];
+		}
 	}
 	return ;
 }
@@ -295,7 +295,7 @@ function give_commission()
 
 
 
-// EXERCICE 4 
+//EXERCICE 4 
 
 function options_deductible()
 {
@@ -322,6 +322,7 @@ function options_deductible()
 }
 
 
+//EXERCICE 5
 
 function all_payment()
 {
@@ -406,28 +407,28 @@ function update_modification(){
 			
 		for(var j=0; j<rentals.length; j++){
 				
-				if(rentalModifications[i].rentalId == rentals[j].id){
+			if(rentalModifications[i].rentalId == rentals[j].id){
 					
-					if( typeof rentalModifications[i].returnDate != "undefined"){
+				if( typeof rentalModifications[i].returnDate != "undefined"){
 					rentals[j].returnDate = rentalModifications[i].returnDate;
-					}
-
-					if(typeof rentalModifications[i].pickupDate != "undefined"){
-					rentals[j].pickupDate = rentalModifications[i].pickupDate;
-					}
-			
-					if(typeof rentalModifications[i].distance != "undefined"){
-					rentals[j].distance = rentalModifications[i].distance;
-					}
-					
-					if(typeof rentalModifications[i].options!="undefined"){
-					rentals[j].options.deductibleReduction=rentalModifications[i].options.deductibleReduction;
-					}
-					
-					if(typeof rentalModifications[i].carId!="undefined"){
-					rentals[j].carId=rentalModifications[i].carId;
-					}
 				}
+
+				if(typeof rentalModifications[i].pickupDate != "undefined"){
+					rentals[j].pickupDate = rentalModifications[i].pickupDate;
+				}
+			
+				if(typeof rentalModifications[i].distance != "undefined"){
+					rentals[j].distance = rentalModifications[i].distance;
+				}
+					
+				if(typeof rentalModifications[i].options!="undefined"){
+					rentals[j].options.deductibleReduction=rentalModifications[i].options.deductibleReduction;
+				}
+					
+				if(typeof rentalModifications[i].carId!="undefined"){
+					rentals[j].carId=rentalModifications[i].carId;
+				}
+			}
 		}
 
 	}
